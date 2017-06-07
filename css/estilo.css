@@ -1,0 +1,139 @@
+@font-face {
+    font-family: "Din Light";
+    src: url("../fonts/din-next-lt-pro-light.otf");
+}
+
+@font-face {
+    font-family: "Din";
+    src: url("../fonts/din-next-lt-pro.otf");
+}
+
+body {
+    font-family: Din, Din Light, Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*normalize*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 10px;
+}
+/**/
+/*general*/
+#header {
+    background-color: #ffeabf;
+    margin: 0px;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#logo {
+    height: 60px;
+    width: 172px;
+    /*background-image: url('alcar-logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;*/
+}
+
+#idiomas {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 100px;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 7px;
+    background-color: #fcefd4;
+}
+
+#menu li {
+    width: 33%;
+    margin: auto;
+    text-align: center;
+    line-height: 2em;
+}
+
+#barra {
+    height: 0.3vh;
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #dcba92;
+}
+
+#links {
+    display: flex;
+    justify-content: space-around;
+    color: #81807b;
+}
+
+/*rss color: #bec3c9;*/
+
+/*inicio / acerca*/
+
+main {
+    width: 75%;
+    margin: auto;
+    padding-top: 200px;
+}
+
+.imgart {
+    width: 100%;
+}
+
+article {
+    width: 95%;
+    margin: auto;
+}
+
+p {
+    text-align: justify;
+    column-count: 2;
+    column-gap: 100px;
+}
+
+/*contacto*/
+
+.col4 {
+    display: inline-block;
+    width: 33%;
+}
+
+.col12 {
+    display: inline-block;
+    width: 68%;
+}
+
+label {
+    margin: 5px;
+}
+
+#nombre, #mail, textarea {
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
