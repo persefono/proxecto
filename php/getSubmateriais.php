@@ -1,7 +1,7 @@
 <?php
     include 'conectaBD.php';
     $bd = conectar();
-    $rows = getMateriais($bd, $_POST['lang']);
+    $rows = getSubmateriais($bd, $_POST['id'], $_POST['lang']);
     desconectar($bd);
     print json_encode($rows);
 ?>
