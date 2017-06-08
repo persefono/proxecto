@@ -12,6 +12,7 @@ body {
     font-family: Din, Din Light, Arial, Helvetica, sans-serif;
     padding: 0px;
     margin: 0px;
+    font-size: 14px;
 }
 
 /*normalize*/
@@ -41,6 +42,7 @@ li {
     position: fixed;
     width: 100%;
     box-sizing: border-box;
+    z-index: 10;
 }
 
 #logo {
@@ -62,6 +64,7 @@ nav {
     position: fixed;
     width: 100%;
     top: 100px;
+    z-index: 10;
 }
 
 #menu {
@@ -71,11 +74,12 @@ nav {
     background-color: #fcefd4;
 }
 
-#menu li {
-    width: 33%;
-    margin: auto;
-    text-align: center;
-    line-height: 2em;
+#menu > label, #imenu {
+    display: none;
+}
+
+p {
+    font-family: Din Light;
 }
 
 #barra {
@@ -90,6 +94,10 @@ nav {
     display: flex;
     justify-content: space-around;
     color: #81807b;
+}
+
+.iconos:hover {
+    color: black;
 }
 
 /*rss color: #bec3c9;*/
@@ -111,29 +119,57 @@ article {
     margin: auto;
 }
 
-p {
+.columnas {
     text-align: justify;
     column-count: 2;
     column-gap: 100px;
 }
 
-/*contacto*/
+/* ubicacion */
 
-.col4 {
-    display: inline-block;
-    width: 33%;
+#mapa {
+    width: 100%;
+    height: 500px;
 }
 
-.col12 {
-    display: inline-block;
-    width: 68%;
-}
+/* mediaqueries */
+@media screen and (max-width:768px) {
 
-label {
-    margin: 5px;
-}
+    .columnas {
+        column-count: 1;
+    }
 
-#nombre, #mail, textarea {
-    margin-left: 5px;
-    margin-bottom: 10px;
+    #header {
+        flex-direction: column;
+        height: 110px;
+    }
+
+    #idiomas {
+        padding-top: 10px;
+    }
+
+    nav {
+        top: 110px;
+    }
+
+    #menu {
+        flex-direction: column;
+    }
+
+    #menu > label {
+        display: block;
+    }
+
+    .amenu {
+        display: none;
+        padding-top: 10px;
+    }
+
+    #imenu:checked ~ .amenu {
+        display: block;
+    }
+
+    #links {
+        flex-direction: column;
+    }
 }
